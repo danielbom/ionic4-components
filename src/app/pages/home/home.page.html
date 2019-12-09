@@ -6,7 +6,7 @@
 
 <ion-content class="ion-padding">
   <ion-row *ngFor="let page of pages">
-    <ion-button [routerLink]="['..', routes[page.component]]" class="pop-in">
+    <ion-button [routerLink]="['..', routes[page.component]]" class="pop-in" [color]="page.color">
       <ion-icon [name]="page.icon"></ion-icon>
       <ion-label>{{page.title}}</ion-label>
     </ion-button>

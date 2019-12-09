@@ -9,7 +9,13 @@ import { Subject } from "rxjs";
 export class HomePage {
   activePage = new Subject();
   pages = [
-    { title: "Home", component: "HomePage", active: true, icon: "home" },
+    {
+      title: "Home",
+      component: "HomePage",
+      active: true,
+      icon: "home",
+      color: "success"
+    },
     {
       title: "Accordion List",
       component: "AccordionListPage",
@@ -34,7 +40,13 @@ export class HomePage {
       active: false,
       icon: "archive"
     },
-    { title: "Lists", component: "ListPage", active: false, icon: "body" },
+    {
+      title: "Lists",
+      component: "ListPage",
+      active: false,
+      icon: "body",
+      color: "success"
+    },
     {
       title: "Miscellaneous",
       component: "MiscellaneousListPage",
@@ -89,7 +101,13 @@ export class HomePage {
       active: false,
       icon: "contact"
     },
-    { title: "Theming", component: "ThemingPage", active: false, icon: "power" }
+    {
+      title: "Theming",
+      component: "ThemingPage",
+      active: false,
+      icon: "power",
+      color: "success"
+    }
   ];
 
   routes = {
