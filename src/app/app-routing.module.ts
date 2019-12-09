@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'theming',
     loadChildren: () => import('./pages/theming/theming.module').then( m => m.ThemingPageModule)
   },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lists</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item (click)="itemTapped($event, item)" *ngFor="let item of items">
+      {{item.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>
