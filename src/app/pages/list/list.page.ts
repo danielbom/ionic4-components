@@ -36,11 +36,11 @@ export class ListPage implements OnInit {
 
   routes = {
     SettingsListPage: "settings-list",
-    SlidingItemPage: "",
-    DeleteItemsPage: "",
-    ReactiveListLabelPage: "",
-    UsersPage: "",
-    CryptoListPage: "",
+    SlidingItemPage: "sliding-item",
+    DeleteItemsPage: "delete-items",
+    ReactiveListLabelPage: "reactive-list-label",
+    UsersPage: "users",
+    CryptoListPage: "crypto-list",
   }
 
   constructor(
