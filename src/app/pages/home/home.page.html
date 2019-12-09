@@ -4,9 +4,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="ion-padding">
   <ion-row *ngFor="let page of pages">
-    <ion-button>
+    <ion-button [routerLink]="['..', routes[page.component]]" class="pop-in">
       <ion-icon [name]="page.icon"></ion-icon>
       <ion-label>{{page.title}}</ion-label>
     </ion-button>

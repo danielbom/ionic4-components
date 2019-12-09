@@ -1,4 +1,4 @@
-import { AppState } from "./app.global";
+import { AppState } from "src/services/app.state.service";
 import { Component } from "@angular/core";
 
 import { Platform } from "@ionic/angular";
