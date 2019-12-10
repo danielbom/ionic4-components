@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Card with Image</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards">
+    <img [src]="card.image" (click)="cardTapped(card)" />
+    <ion-card-content>
+      <h2 class="card-title">
+        {{card.title}}
+      </h2>
+      <p>
+        {{card.description}}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <ion-button fill="clear" size="small" color="danger" (click)="favorite(card)">
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </ion-button>
+      </ion-col>
+      <ion-col text-center>
+        <ion-button fill="clear" size="small" color="danger" (click)="listen(card)">
+          <ion-icon name="musical-notes"></ion-icon>
+          Listen
+        </ion-button>
+      </ion-col>
+      <ion-col text-right>
+        <ion-button fill="clear" size="small" color="danger" (click)="share(card)">
+          <ion-icon name="share-alt"></ion-icon>
+          Share
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
