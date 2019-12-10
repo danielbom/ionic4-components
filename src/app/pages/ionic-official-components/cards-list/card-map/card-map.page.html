@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Card with Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards" class="adv-map">
+    <!-- Map image -->
+    <div class="map-image">
+      <img [src]="card.image">
+      <ion-fab horizontal="right" vertical="top">
+        <ion-fab-button class="fab-map pop-in" (click)="seeInMap(card)">
+          <ion-icon name="pin"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div>
+    <!-- Places -->
+    <ion-item *ngFor="let place of card.places" (click)="placeTapped(place)">
+      <ion-icon slot="start" color="dark" size="large" [name]="place.icon"></ion-icon>
+      <div>
+        <h2>{{place.name}}</h2>
+        <p>{{place.address}}</p>
+      </div>
+    </ion-item>
+    <!--  -->
+    <ion-row class="ion-justify-content-between ion-align-items-center ion-padding-horizontal">
+      <ion-text color="secondary">
+        {{card.ETA}}
+      </ion-text>
+      <ion-text>
+        {{card.distance}}
+      </ion-text>
+      <ion-button color="primary" fill="clear" (click)="getDirections(card)">
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </ion-button>
+    </ion-row>
+  </ion-card>
+</ion-content>

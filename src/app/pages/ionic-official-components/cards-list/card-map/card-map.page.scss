@@ -1,0 +1,16 @@
+ion-card.map-image {
+  position: relative;
+}
+
+ion-card.adv-map p {
+  font-size: 0.7em !important;
+}
+
+ion-fab-button.fab-map {
+  top: calc(100% - 35px);
+  z-index: 50;
+}
+
+.item-bold {
+  font-weight: bold;
+}
