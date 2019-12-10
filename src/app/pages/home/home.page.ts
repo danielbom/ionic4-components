@@ -19,14 +19,14 @@ export class HomePage {
       title: "Accordion List",
       component: "AccordionListPage",
       active: false,
-      icon: "map"
+      icon: "map",
+      color: "success"
     },
     {
       title: "Ionic Official Components",
       component: "IonicOfficialComponentsPage",
       active: false,
-      icon: "ionic",
-      color: "success"
+      icon: "ionic"
     },
     {
       title: "Ionic Native Features",
