@@ -40,7 +40,6 @@ export class ListPage implements OnInit {
     DeleteItemsPage: "delete-items",
     ReactiveListLabelPage: "reactive-list-label",
     UsersPage: "users",
-    CryptoListPage: "crypto-list",
   }
 
   constructor(

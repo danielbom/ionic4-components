@@ -27,10 +27,6 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
-  },
-  {
-    path: 'crypto-list',
-    loadChildren: () => import('./crypto-list/crypto-list.module').then( m => m.CryptoListPageModule)
   }
 ];
 
