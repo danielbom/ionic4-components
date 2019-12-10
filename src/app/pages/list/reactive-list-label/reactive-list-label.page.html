@@ -1,10 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-back-button slot="start"></ion-back-button>
-    <ion-title>reactive-list-label</ion-title>
+    <ion-title>Reactive List Label</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <!-- Fab items -->
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed" class="fab-reactive-list">
+    <ion-button>
+      <ion-icon name="add"></ion-icon>
+      {{currentCategory}}
+    </ion-button>
+    <ion-fab-list side="top">
+      <ion-button *ngFor="let category of categories" color="tertiary" (click)="setCategory(category)">
+        {{category}}
+      </ion-button>
+    </ion-fab-list>
+  </ion-fab>
+  <!-- Card items -->
+  <ion-card *ngFor="let book of dataList">
+    <img [src]="book.pictureProduct">
+    <ion-card-content>
+      <ion-card-title>
+        {{book.productName}}
+      </ion-card-title>
+      <p>{{book.author}}</p>
+      <b>{{book.category}} - {{book.price}}</b>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
