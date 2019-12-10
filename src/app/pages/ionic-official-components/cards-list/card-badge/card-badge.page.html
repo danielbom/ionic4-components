@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Card with Badge</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards">
+    <img [src]="card.image" (click)="cardTapped(card)" />
+    <ion-card-content>
+      <h2 class="card-title">
+        {{card.title}}
+      </h2>
+      <p>{{card.description}}</p>
+    </ion-card-content>
+    <ion-item (click)="albumsTapped(card)">
+      <ion-icon name="musical-notes" class="albums-icon"></ion-icon>
+      <span class="ion-padding-horizontal">
+        Albums
+      </span>
+      <ion-badge>{{card.albums}}</ion-badge>
+    </ion-item>
+    <ion-item (click)="followersTapped(card)">
+      <ion-icon name="logo-twitter" class="twitter-icon"></ion-icon>
+      <span class="ion-padding-horizontal">
+        Followers
+      </span>
+      <ion-badge>{{card.followers}}</ion-badge>
+    </ion-item>
+  </ion-card>
+</ion-content>
