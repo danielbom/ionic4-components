@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Card Background List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards" (click)="cardTapped(card)">
+    <img [src]="card.image">
+    <div class="card-title">{{card.title}}</div>
+    <div class="card-subtitle">{{card.subtitle}}</div>
+  </ion-card>
+</ion-content>
