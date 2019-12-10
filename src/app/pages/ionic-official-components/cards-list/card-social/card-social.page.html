@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Social Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards">
+    <!-- User info -->
+    <ion-item>
+      <ion-avatar>
+        <img [src]="card.avatarImageUrl" (click)="avatarTapped(card)">
+      </ion-avatar>
+      <div class="ion-padding-start">
+        <h2>{{card.name}}</h2>
+        <p>{{card.date}}</p>
+      </div>
+    </ion-item>
+    <!-- Image post -->
+    <img [src]="card.postImageUrl" (click)="imageTapped(card)">
+    <!-- Text post -->
+    <ion-card-content>
+      <p>{{card.postText}}</p>
+    </ion-card-content>
+    <!-- Actions Buttons -->
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" fill="clear" size="small" (click)="like(card)">
+        <ion-icon name="thumbs-up"></ion-icon>
+        {{card.likes}} Likes
+      </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" fill="clear" size="small" (click)="comment(card)">
+        <ion-icon name="text"></ion-icon>
+        {{card.comments}} Comments
+      </ion-button>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <ion-note color="primary">
+          {{card.timestamp}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
