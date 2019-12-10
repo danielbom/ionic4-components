@@ -16,6 +16,14 @@ const routes: Routes = [
     path: 'ionic-official-components',
     loadChildren: () => import('./pages/ionic-official-components/ionic-official-components.module').then( m => m.IonicOfficialComponentsPageModule)
   },
+  {
+    path: 'timeline',
+    loadChildren: () => import('./pages/timeline/timeline.module').then( m => m.TimelinePageModule)
+  },
+  {
+    path: 'accordion-list',
+    loadChildren: () => import('./pages/accordion-list/accordion-list.module').then( m => m.AccordionListPageModule)
+  },
 ];
 
 @NgModule({
