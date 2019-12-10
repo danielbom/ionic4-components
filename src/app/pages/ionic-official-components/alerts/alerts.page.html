@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button></ion-back-button>
+    <ion-title>Alerts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button fill="block" (click)="doAlert()">Basic Alert</ion-button>
+  <ion-button color="light" fill="block" (click)="doConfirm()">Confirm Alert</ion-button>
+  <ion-button color="secondary" fill="block" (click)="doPrompt()">Prompt Alert</ion-button>
+  <ion-button color="danger" fill="block" (click)="doRadio()">Radio Alert</ion-button>
+  <ion-button color="dark" fill="block" (click)="doCheckbox()">Checkbox Alert</ion-button>
+</ion-content>
