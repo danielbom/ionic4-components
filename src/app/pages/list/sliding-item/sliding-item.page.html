@@ -1,10 +1,39 @@
 <ion-header>
   <ion-toolbar>
     <ion-back-button slot="start"></ion-back-button>
-    <ion-title>sliding-item</ion-title>
+    <ion-title>Sliding Item</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item-sliding #slidingItem *ngFor="let item of items">
+      <ion-item (click)="slidingItem.open()">
+        <ion-thumbnail>
+          <img [src]="item.image" alt="">
+        </ion-thumbnail>
+        <div class="ion-padding-start">
+          <h2>{{item.title}}</h2>
+          <p>{{item.place}} • {{item.date}}</p>
+        </div>
+      </ion-item>
+      <ion-item-options expandable>
+        <ion-button color="secondary" (click)="viewComments(item)">
+          <ion-icon name="chatbubbles">
+            Comments
+          </ion-icon>
+        </ion-button>
+        <ion-button color="primary" (click)="viewPlayers(item)">
+          <ion-icon name="contacts">
+            Players
+          </ion-icon>
+        </ion-button>
+        <ion-button color="danger" (click)="deleteItem(item)">
+          <ion-icon name="trash">
+            Delete
+          </ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
