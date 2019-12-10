@@ -14,7 +14,6 @@ export class HomePage {
       component: "HomePage",
       active: true,
       icon: "home",
-      color: "success"
     },
     {
       title: "Accordion List",
@@ -26,7 +25,8 @@ export class HomePage {
       title: "Ionic Official Components",
       component: "IonicOfficialComponentsPage",
       active: false,
-      icon: "ionic"
+      icon: "ionic",
+      color: "success"
     },
     {
       title: "Ionic Native Features",
@@ -45,7 +45,6 @@ export class HomePage {
       component: "ListPage",
       active: false,
       icon: "body",
-      color: "success"
     },
     {
       title: "Miscellaneous",
@@ -106,7 +105,6 @@ export class HomePage {
       component: "ThemingPage",
       active: false,
       icon: "power",
-      color: "success"
     }
   ];
 
