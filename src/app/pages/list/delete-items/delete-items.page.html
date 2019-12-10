@@ -1,10 +1,48 @@
 <ion-header>
   <ion-toolbar>
     <ion-back-button slot="start"></ion-back-button>
-    <ion-title>delete-items</ion-title>
+    <ion-title>Delete Items</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <!-- Ion List Header (items) -->
+    <ion-list-header>
+      Swipe left to delete
+      <ion-button fill="clear" size="small" shape="round" fill="outline" (click)="addItem()">
+        <ion-icon color="primary" name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-list-header>
+    <!-- Ion Item Sliding (items) -->
+    <ion-item-sliding *ngFor="let item of items; let i = index; " >
+      <ion-item>{{item.title}}</ion-item>
+      <!-- Ion Item Options -->
+      <ion-item-options expandable (ionSwipe)="deleteItem(items, i)">
+        <ion-button color="danger" (click)="deleteItem(items, i)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <!-- Ion List Header (things) -->
+    <ion-list-header>
+      Tap or swipe to delete
+      <ion-button fill="clear" size="small" shape="round" fill="outline" (click)="addThing()">
+        <ion-icon color="primary" name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-list-header>
+    <!-- Ion Item Sliding (things) -->
+    <ion-item-sliding #slidingItem *ngFor="let thing of things; let i = index;" >
+      <ion-item>
+        <ion-icon class="ion-padding-horizontal" color="danger" name="remove-circle" (click)="slidingItem.open()"></ion-icon>
+        {{thing.title}}
+      </ion-item>
+      <!-- Ion Item Options -->
+      <ion-item-options expandable (ionSwipe)="deleteItem(things, i)">
+        <ion-button color="danger" (click)="deleteItem(things, i)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
