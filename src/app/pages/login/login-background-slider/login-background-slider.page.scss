@@ -1,0 +1,61 @@
+.scroll-content {
+  margin-top: 0 !important;
+}
+
+.logo {
+  width: 70%;
+  height: auto;
+  padding-top: 5vh;
+  padding-bottom: 8vh;
+}
+
+span {
+  color: white;
+}
+
+.slide-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+}
+
+.slide-zoom {
+  background: rgba(32, 32, 32, 0.2) !important;
+  height: 100%;
+}
+
+ion-slides {
+  height: 100vh;
+}
+
+ion-item {
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+  --highlight-color-focused: transparent;
+  --background: transparent;
+  --color: white;
+  --border-color: white;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  color: white;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  padding: 10vh;
+}
+
+ion-button {
+  opacity: 0.8;
+}

@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-slides pager="false" effect="fade" [options]="slideOpts">
+    <ion-slide
+      class="slide-background swiper-no-swiping"
+      *ngFor="let background of backgrounds"
+      [ngStyle]="{'background-image': 'url(' + background +')'}"
+    >
+    </ion-slide>
+  </ion-slides>
+  <div class="container">
+    <div class="login">
+      <img class="logo" src="assets/img/logo/logo-canon.png" />
+      <form>
+        <strong>Login</strong>
+        <ion-item>
+          <ion-label>Email:</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-button class="ion-margin" color="danger">
+          LOGIN
+        </ion-button>
+        <p><strong>Forgot your password?</strong></p>
+      </form>
+    </div>
+  </div>
+</ion-content>
