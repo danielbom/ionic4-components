@@ -24,6 +24,10 @@ const routes: Routes = [
     path: 'accordion-list',
     loadChildren: () => import('./pages/accordion-list/accordion-list.module').then( m => m.AccordionListPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

@@ -19,8 +19,7 @@ export class HomePage {
       title: "Accordion List",
       component: "AccordionListPage",
       active: false,
-      icon: "map",
-      color: "success"
+      icon: "map"
     },
     {
       title: "Ionic Official Components",
@@ -38,7 +37,8 @@ export class HomePage {
       title: "Login",
       component: "LoginListPage",
       active: false,
-      icon: "archive"
+      icon: "archive",
+      color: "success"
     },
     {
       title: "Lists",
