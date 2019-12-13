@@ -1,0 +1,19 @@
+<ion-content class="ion-fullscreen">
+  <div class="login">
+    <img class="logo" src="assets/img/logo/logo-canon.png" />
+    <div class="buttons">
+      <ion-button expand="block" color="primary" (click)="goToLogin()">
+        Continue with Facebook
+      </ion-button>
+      <ion-button expand="block" color="danger" (click)="goToLogin()">
+        Login
+      </ion-button>
+      <ion-button expand="block" color="dark" (click)="goToSignup()">
+        Create account
+      </ion-button>
+    </div>
+  </div>
+  <video #player playsinline autoplay muted loop poster="assets/video/video-cover.jpg" id="bgvid">
+    <source src="assets/video/background-480.mp4" type="video/mp4"> Your browser does not support the video tag.
+  </video>
+</ion-content>
