@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Slides</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-button expand="block" *ngFor="let item of items" (click)="itemTapped(item)">
+      {{item.title}}
+    </ion-button>
+  </ion-list>
+</ion-content>
