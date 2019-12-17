@@ -96,9 +96,10 @@ export class HomePage {
     },
     {
       title: "Slides",
-      component: "SlidesPage",
+      component: "SlidePage",
       active: false,
-      icon: "contact"
+      icon: "contact",
+      color: "success"
     },
     {
       title: "Theming",
@@ -123,7 +124,7 @@ export class HomePage {
     ProfileListPage: "profile",
     SideMenuPage: "side-menu",
     TimelinePage: "timeline",
-    SlidesPage: "slides",
+    SlidePage: "slide",
     ThemingPage: "theming"
   };
 
